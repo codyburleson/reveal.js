@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Master Plan | DP Engineering</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/cnh-black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+        <style>
+
+        :root {
+            --r-heading2-size: 1.5em;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+        </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<!-- *********************************************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************************************** -->
+<section>
+    <img src="https://static.dlrportal.com/assets/cnh-brand-logos/svgs/regular/cnhi-internal.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+    <h3>Master Plan</h3>
+    <h4>Dealer Platform Engineering</h4>
+    <p><small>December 2024</small></p>
+</section>
+
+<!--
+***********************************************************************************************************************************************************
+OPERATIONS
+***********************************************************************************************************************************************************
+-->
+
+<section>
+<section class="left-align" data-markdown>
+## 🔴 DP Admin Create / Manage User
+- Rescheduled due to scope changes
+- Schedule changes uncommunicated
+- Unresolved schedule risks remain
+</section>
+
+<section class="left-align" data-markdown>
+## 🔴 DP Admin Create / Manage User
+### Unresolved Scedule Risks
+- Dependencies on HCL DX Migration project
+- Special Access views (CNH-14092, CNH-14105)
+- Blocker: CNH-14094 - Authentication / WebSEAL (depends on CNH-14712)
+- Quality of design
+    - Missing Gherkins (Larry is working on - need to plan time est. & deadline)
+    - How to manage delegated admins? (not UAT-1!, but needs designed/was missed)
+    - No formal/exhaustive review (plan based on finish gherkins)
+</section>
+
+<section class="left-align" data-markdown>
+## 🔴 HCL DX Frontend Migration
+- Bottlenecked on the need for Pull Request code reviews
+- Got dp-web-components setup with Callebe Gomes
+- India team now getting held up awaiting direction
+</section>
+
+<section class="left-align" data-markdown>
+## 🔴 Federation / IdP (Azure EntraID as IdP) 
+- Joe lacks bandwidth to investigate Azure Graph API for doing CRUD ops for EntraID
+</section>
+
+<section class="left-align" data-markdown>
+## 🟡 Test Framework PoC
+- Tomas is onboard and oriented
+- Project management risks remain
+    - Specifications, Definition of Success, Constrained Schedule
+</section>
+
+<section class="left-align" data-markdown>
+## 🟡 Dealer Master Data on EDS/DEP
+- Doug and Oliver assisting, but plan is unclear
+</section>
+
+<section class="left-align" data-markdown>
+## 🟡 System Monitoring and Logging
+- Anson’s lacks bandwidth and plan is unclear
+- As we understand, cloud infrastructure (on DEP?) is needed
+  - Discuss with Anson and consider spinning up one Akamai (Linode), escalate, or Dealer360 (Azure)
+</section>
+
+<section class="left-align" data-markdown>
+## 🟡 DP Design Language
+- Enagement with India design team is lacking
+  - Last meeting from Sara canceled
+  - Unaddressed Communications
+  - We're not being proactive in our reviews 
+  - New design elements missing from Storybook
+</section>
+
+<section class="left-align" data-markdown>
+## 🟡 Sitecore CMS Replacement
+- RFP work completed; awaiting responses
+- Our responsibilities unplanned:
+    - HCL Data Extract (API to CSV, JSON, XML or other)
+    - Modify Search Service API
+    - Script to compare migration efficacy (one collection to another)
+    - TO DO: We need our epic for this, basically
+</section>
+
+<section class="left-align" data-markdown>
+## 🟢 Iveco Automated User Creation
+- Iveco Capital team is conducting UAT
+- DEC 11 rollout planned
+</section>
+
+<section class="left-align" data-markdown>
+## 🟢 Onetrust CookieBot Replacement
+- Awaiting feedback from Fabio Stecco
+</section>
+</section>
+
+<!--
+***********************************************************************************************************************************************************
+RADARS
+***********************************************************************************************************************************************************
+-->
+
+<section class="left-align" data-markdown>
+## HCL DX Migration - RADAR
+- Put FINISH emphasis on Header and Footer BEFORE Help Bubble
+- 🔲 Cody to implement footer translations thing
+- 🔲 Follow up with Callebe Gomez on specific assignments
+- 🔲 Sumit's CNH-14294
+    – dp-content-list has no Storybook and is not even rendering (CODY: shape this up for the next meeting)
+- 🔲 Review Shivam's PR for CNH-14297 – Help Bubble
+- 🔲 Begam | Review [PR for dp-chip](https://dev.azure.com/dealerplatform/dealer-portal/_git/dp-web-components/pullrequest/1123)
+</section>
+
+<section class="left-align" data-markdown>
+## DP Design Language - RADAR
+- 🔲 Review & respond to correspondence from India design team
+- 🔲 Provide feedback to designs in Zepplin
+- 🔲 Add color pallette and font specifications to Storybook
+</section>
+
+<!--
+***********************************************************************************************************************************************************
+STANDING OPERATIONS
+***********************************************************************************************************************************************************
+-->
+<section>
+<section class="left-align" data-markdown>
+## Standing Operations
+- Runtime Support
+- Program & Project Management
+- Knowledge Management
+  - Dealer Platform Architecture needs (C4 Diagrams)
+- Requirements & Design
+- Marketing Communications & Reporting
+</section>
+
+<section class="left-align" data-markdown>
+## 🟢 Runtime Support
+- Friday orientation meeting scheduled with Oliver, Vivek, and Tejaswini
+    - CNH-14264 - security audit issue needs assignement and an estimate
+	- Geo-locator recurring task needs KT and then to be Automated
+    - PBI app has reference to a Cloudflair CDN resource (put the resource into the PBI app; it has a pipline)?
+    - Oliver wants to assign recurring tasks (e.g. Staging loads)
+</section>
+</section>
+
+<!--
+***********************************************************************************************************************************************************
+CORE DOCTRINE
+***********************************************************************************************************************************************************
+-->
+
+<section>
+<section class="left-align" data-markdown>
+## Core Doctrine
+- Technical Excellence
+  - Prioritize code quality, testing, and architectural decisions
+  - Make choices that promote maintainable, scalable systems
+- Continuous Learning
+  - Foster knowledge sharing and skill development
+  - Stay current with technology trends and best practices
+</section>
+
+<section class="left-align" data-markdown>
+## Core Doctrine
+- Clear Communication
+    - Ensure expectations and decisions are well-understood
+    - Maintain transparency around priorities and changes
+- Psychological Safety
+    - Create an environment where team members can voice concerns
+    - Treat mistakes as learning opportunities
+</section>
+
+<section class="left-align" data-markdown>
+## Core Doctrine
+- Customer Focus
+    - Ground technical decisions in user needs
+    - Balance short-term fixes with long-term solutions
+- Empowerment
+    - Trust teams to make technical decisions
+    - Provide autonomy while maintaining accountability
+</section>
+
+<section class="left-align" data-markdown>
+## Core Doctrine
+- Collaboration
+    - Break down silos between teams
+    - Encourage pair programming and code reviews
+- Data-Driven Decision Making
+    - Use metrics to guide technical choices
+    - Make trade-offs based on evidence, not opinion
+</section>
+
+<section class="left-align" data-markdown>
+## Core Doctrine
+- Work-Life Balance
+    - Respect boundaries and prevent burnout
+    - Plan sustainable development cycles
+- Innovation
+    - Encourage experimentation and new approaches
+    - Balance innovation with stability and reliability
+</section>
+</section>
+
+
+<!--
+***********************************************************************************************************************************************************
+CORPORATE DIRECTIVES
+***********************************************************************************************************************************************************
+-->
+
+<section>
+<section>
+    <h4>Corporate Directives</h4>
+</section>
+
+<section class="left-align" data-markdown>
+## Focused 5
+* CUSTOMER
+* SAFETY
+* QUALITY
+* DELIVERY
+* PROFIT
+</section>
+
+<section class="left-align" data-markdown>
+## Cultural Beliefs
+- **CUSTOMER FIRST** - I create customer success by delivering the best experiences.
+- **GROW TOGETHER** - I seek feedback to promote trust, inclusivity, and development.
+- **ONE TEAM** - I collaborate across and beyond the organization to achieve Key Results.
+- **MAKE IT SIMPLE** - I simplify to drive speed, accountability, and innovation.
+- **BE THE BEST** - I continuously pursue excellence to deliver the Focused 5.
+</section>
+</section>
+
+<!--
+***********************************************************************************************************************************************************
+DEALER PLATFORM ORGANIZATION
+***********************************************************************************************************************************************************
+-->
+
+<section>
+<section class="left-align" data-markdown>
+## Cody Burleson, ICT Senior Software Engineer
+### Role
+- Involved in projects from the design and planning stages through implementation and support of the project.
+- Responsible for managing the technical and functional designs, leading our development team to build and deliver solutions leveraging our technology platforms.
+</section>
+
+<section class="left-align" data-markdown>
+## Cody Burleson, ICT Senior Software Engineer
+### Responsibilities
+- Design, develop, modify, implement, and support software components throughout the software stack
+- Lead and apply the development & practice of technology standards, policies and principles
+- Lead application development projects by providing analysis, design, programming, and deployments
+- Mentor others to allow for skill/knowledge development through advice, coaching, and training opportunities
+</section>
+
+<section class="left-align" data-markdown>
+## Cody Burleson, ICT Senior Software Engineer
+### Responsibilities
+- Identify process improvements and establish best practices
+- Work in close partnership with cross-functional teams and management
+- Determine root cause for complex software issues and develop practical, efficient, and permanent solutions
+</section>
+
+<section class="left-align" data-markdown>
+## Cody Burleson, ICT Senior Software Engineer
+### Responsibilities
+- Improve operations by conducting systems analysis, code reviews, regression testing strategies and implementing changes in policies and procedures
+- Participate in resource selection and scope of work development
+- Contribute to the ongoing evolution of the existing content supply portfolio of applications and services
+</section>
+
+<section class="left-align" data-markdown>
+## Cody Burleson, ICT Senior Software Engineer
+### Responsibilities
+- Study new technologies and vendor packages; evaluate and make recommendations
+</section>
+</section>
+
+<!-- *********************************************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************************************** -->
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+                // The "normal" size of the presentation, aspect ratio will
+                // be preserved when the presentation is scaled to fit different
+                // resolutions. Can be specified using percentage units.
+                width: 1920, // default: 960
+                height: 1080, // default: 700
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
